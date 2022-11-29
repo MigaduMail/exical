@@ -1,0 +1,77 @@
+defmodule Exical.Journal do
+  @moduledoc """
+  [VJOURNAL](https://www.rfc-editor.org/rfc/rfc5545#section-3.6.3) component.
+  """
+  defstruct uid: nil,
+            dtstamp: nil,
+            class: nil,
+            created: nil,
+            dtstart: nil,
+            last_mod: nil,
+            organizer: nil,
+            recurid: nil,
+            seq: nil,
+            status: nil,
+            summary: nil,
+            url: nil,
+            rrule: nil,
+            attach: nil,
+            attendee: [],
+            comment: nil,
+            contact: nil,
+            description: nil,
+            exdate: nil,
+            related: nil,
+            rdate: nil,
+            rstatus: nil
+
+  def parse(%Exical.Journal{
+        uid: uid,
+        dtstamp: dtstamp,
+        class: class,
+        created: created,
+        dtstart: dtstart,
+        last_mod: last_mod,
+        organizer: organizer,
+        recurid: recurid,
+        seq: seq,
+        status: status,
+        summary: summary,
+        url: url,
+        rrule: rrule,
+        attach: attach,
+        attendee: attendee,
+        comment: comment,
+        contact: contact,
+        description: description,
+        exdate: exdate,
+        related: related,
+        rdate: rdate,
+        rstatus: rstatus
+      }) do
+    %Exical.Journal{
+      uid: uid,
+      dtstamp: dtstamp,
+      class: class,
+      created: created,
+      dtstart: dtstart,
+      last_mod: last_mod,
+      organizer: organizer,
+      recurid: recurid,
+      seq: seq,
+      status: status,
+      summary: summary,
+      url: url,
+      rrule: rrule,
+      attach: attach,
+      attendee: attendee,
+      comment: comment,
+      contact: contact,
+      description: description,
+      exdate: exdate,
+      related: related,
+      rdate: rdate,
+      rstatus: rstatus
+    }
+  end
+end
